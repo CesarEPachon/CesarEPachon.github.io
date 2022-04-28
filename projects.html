@@ -1,0 +1,20 @@
+---
+layout: page
+title: Projects
+---
+<section class="list">
+    {% for post in site.posts %}
+        {% if post.projects %}
+            <div class="item {% if post.star %}star{% endif %}">
+                <!-- <a class="url" href="{% if post.externalLink %}{{ post.externalLink }}{% else %}{{ site.url }}{{ post.url }}{% endif %}">
+                    <aside><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
+                    <h3 class="title">{{ post.title }}</h3>
+                </a> -->
+                <li>FORES - Automatic forecasting platform for electrical generation and demand</li>
+                <li>GMVTool - Financial BPO tool for customer data processing</li>
+                <li>Hubtek - Invoice automation services for RPA</li>
+                <li>Among others...</li>
+            </div>
+        {% endif %}
+    {% endfor %}
+</section>
